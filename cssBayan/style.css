@@ -25,7 +25,7 @@
 }
 
 .bayan-list {
-    border-top: solid 0.1em grey;
+    border-top: solid 0.1em rgb(128, 128, 128);
     width: 100%;
 }
 
@@ -43,7 +43,7 @@
     align-items: center;
     justify-content: center;
     padding: 1%;
-    border-bottom: solid 0.1em grey;
+    border-bottom: solid 0.1em rgb(128, 128, 128);
     cursor: pointer;
 }
 
@@ -94,7 +94,6 @@
     width: 0;
     transition: width 0.5s;
 }
-
 
 /* Animations styles*/
 
@@ -174,4 +173,18 @@
     .bayan-element-title {
         font-size: 2.5em;
     }
+}
+
+/*Highlight styles */
+
+.bayan-element:active {
+    background-color: rgb(245, 245, 245);
+}
+
+.bayan-element:active .bayan-header .bayan-element-title {
+    color: rgb(255, 0, 0);
+}
+
+.bayan-element:hover .bayan-header .bayan-icon-plus {
+    color: rgb(255, 0, 0);
 }
