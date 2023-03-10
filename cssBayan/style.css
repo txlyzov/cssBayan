@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat");
+
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.bayan {
+    width: 50%;
+    padding: 2.5% 2.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bayan-list {
+    border-top: solid 0.1em grey;
+    width: 100%;
+}
+
+.bayan-header {
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bayan-element {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1%;
+    cursor: pointer;
+    border-bottom: solid 0.1em grey;
+}
+
+.bayan-icon-plus {
+    width: 2em;
+    height: 2em;
+}
+
+.bayan-media {
+    width: 0;
+    transition: width 0.5s;
+}
+
+/* Checkbox hiding styles */
+
+.bayan-label {
+    display: block;
+}
+
+.bayan-input {
+    width: 0;
+    height: 0;
+    position: absolute;
+    -webkit-appearance: none;
+}
+
+
+/* Animations styles*/
+
+.bayan-input:checked+.bayan-element .bayan-media {
+    width: 25vw;
+    transition: width 0.75s;
+}
+
+.bayan-input:checked+.bayan-element .bayan-header .bayan-icon-plus {
+    transform: rotate(45deg);
+}
+
+.bayan-element:hover .bayan-media {
+    width: 25vw;
+    transition: width 0.75s;
+}
+
+.bayan-element:hover .bayan-header .bayan-icon-plus {
+    transform: rotate(45deg);
+}
+
+/* Text styles */
+
+.bayan-title {
+    margin: 0 3% 3% 3%;
+
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 4em;
+}
+
+.bayan-element-title {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: normal;
+    text-align: center;
+    font-size: 2em;
+}
