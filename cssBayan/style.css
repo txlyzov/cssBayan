@@ -52,6 +52,7 @@
 .bayan__icon-plus {
     width: 0.75em;
     height: 0.75em;
+    transition: transform 0.5s;
 }
 
 @media screen and (min-width: 320px) {
@@ -98,7 +99,7 @@
 .bayan__input {
     width: 0;
     height: 0;
-    position: absolute;
+    display: none;
     -webkit-appearance: none;
 }
 
@@ -127,6 +128,7 @@
 
 .bayan__input:checked+.bayan__header-label .bayan__icon-plus {
     transform: rotate(45deg);
+    transition: transform 0.5s;
 }
 
 @media (hover: hover) {
@@ -146,6 +148,7 @@
 
     .bayan__element:hover .bayan__header-label .bayan__icon-plus {
         transform: rotate(45deg);
+        transition: transform 0.5s;
     }
 }
 
