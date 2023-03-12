@@ -38,6 +38,7 @@
 }
 
 .bayan-element {
+    width: 98%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -77,8 +78,20 @@
 
 /* Checkbox hiding styles */
 
-.bayan-label {
-    display: block;
+.bayan-header-label {
+    width: 95%;
+    padding: 0 2.5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bayan-media-label {
+    width: 95%;
+    padding: 0 2.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .bayan-input {
@@ -97,24 +110,24 @@
 
 /* Animations styles*/
 
-.bayan-input:checked+.bayan-element .bayan-media {
+.bayan-input:checked~.bayan-media-label .bayan-media {
     width: 25vw;
     transition: width 0.75s;
     margin: 2%;
 }
 
-.bayan-input:checked+.bayan-element .bayan-header .bayan-icon-plus {
+.bayan-input:checked+.bayan-header-label .bayan-icon-plus {
     transform: rotate(45deg);
 }
 
-@media screen and (min-width: 820px) {
-    .bayan-element:hover .bayan-media {
+@media (hover: hover) {
+    .bayan-element:hover .bayan-media-label .bayan-media {
         width: 25vw;
         transition: width 0.75s;
         margin: 2%;
     }
 
-    .bayan-element:hover .bayan-header .bayan-icon-plus {
+    .bayan-element:hover .bayan-header-label .bayan-icon-plus {
         transform: rotate(45deg);
     }
 }
@@ -181,10 +194,14 @@
     background-color: rgb(245, 245, 245);
 }
 
-.bayan-element:active .bayan-header .bayan-element-title {
+.bayan-element:active .bayan-header-label .bayan-element-title {
     color: rgb(255, 0, 0);
 }
 
-.bayan-element:hover .bayan-header .bayan-icon-plus {
+.bayan-element:active .bayan-header-label .bayan-icon-plus {
     color: rgb(255, 0, 0);
+}
+
+.bayan-element:active .bayan-media-label .bayan-media {
+    opacity: 0.9;
 }
