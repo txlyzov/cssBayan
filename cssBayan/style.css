@@ -45,7 +45,6 @@
     justify-content: center;
     padding: 1%;
     border-bottom: solid 0.1em rgb(128, 128, 128);
-    cursor: pointer;
 }
 
 /* Icon size styles */
@@ -84,6 +83,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    cursor: pointer;
 }
 
 .bayan__media-label {
@@ -92,6 +92,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .bayan__input {
@@ -111,9 +112,17 @@
 /* Animations styles*/
 
 .bayan__input:checked~.bayan__media-label .bayan__media {
-    width: 25vw;
+    width: 60vw;
     transition: width 0.75s;
     margin: 2%;
+}
+
+@media screen and (min-width: 820px) {
+    .bayan__input:checked~.bayan__media-label .bayan__media {
+        width: 30vw;
+        transition: width 0.75s;
+        margin: 2%;
+    }
 }
 
 .bayan__input:checked+.bayan__header-label .bayan__icon-plus {
@@ -122,9 +131,17 @@
 
 @media (hover: hover) {
     .bayan__element:hover .bayan__media-label .bayan__media {
-        width: 25vw;
+        width: 60vw;
         transition: width 0.75s;
         margin: 2%;
+    }
+
+    @media screen and (min-width: 820px) {
+        .bayan__element:hover .bayan__media-label .bayan__media {
+            width: 30vw;
+            transition: width 0.75s;
+            margin: 2%;
+        }
     }
 
     .bayan__element:hover .bayan__header-label .bayan__icon-plus {
