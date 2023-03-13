@@ -214,7 +214,7 @@
 }
 
 .bayan__element:active .bayan__header-label .bayan__element-title {
-    color: rgb(255, 0, 0);
+    color: rgb(255, 0, 0) !important;
 }
 
 .bayan__element:active .bayan__header-label .bayan__icon-plus {
@@ -223,4 +223,28 @@
 
 .bayan__element:active .bayan__media-label .bayan__media {
     opacity: 0.9;
+}
+
+/*Hover remark changes*/
+
+.bayan__element-title {
+    color: rgb(70, 70, 70);
+}
+
+.bayan__icon-plus {
+    display: none;
+}
+
+.bayan__input:checked~.bayan__header-label .bayan__element-title {
+    color: rgb(0, 0, 0);
+}
+
+@media (hover: hover) {
+    .bayan:hover .bayan__list .bayan__element .bayan__header-label .bayan__icon-plus {
+        display: block
+    }
+
+    .bayan:hover .bayan__list .bayan__element .bayan__header-label .bayan__element-title {
+        color: rgb(0, 0, 0);
+    }
 }
